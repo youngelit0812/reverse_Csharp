@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{72EEE9B9-B700-4019-8463-37D89EC737D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DIUS 4.0.4</RootNamespace>
+    <AssemblyName>DIUS 4.0.4</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>DIUS 4.0.4.ico</ApplicationIcon>
+    <StartupObject>DIUS4.My.MyApplication</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SqlServerCe">
+      <HintPath>..\..\32_DIUS4_19-02-202\DIUS4\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\..\32_DIUS4_19-02-202\DIUS4\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView">
+      <HintPath>..\..\32_DIUS4_19-02-202\DIUS4\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.Themes.Office2010Black">
+      <HintPath>..\..\32_DIUS4_19-02-202\DIUS4\Telerik.WinControls.Themes.Office2010Black.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\..\32_DIUS4_19-02-202\DIUS4\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikData">
+      <HintPath>..\..\32_DIUS4_19-02-202\DIUS4\TelerikData.dll</HintPath>
+    </Reference>
+    <Reference Include="vcinet4">
+      <HintPath>..\..\32_DIUS4_19-02-202\DIUS4\vcinet4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DIUS4\Adapters\Adapter.cs" />
+    <Compile Include="DIUS4\Adapters\CmdULA.cs" />
+    <Compile Include="DIUS4\Adapters\ControlCAN.cs" />
+    <Compile Include="DIUS4\Adapters\DeviceList.cs" />
+    <Compile Include="DIUS4\Adapters\Devices_List.cs" />
+    <Compile Include="DIUS4\Adapters\MPI.cs" />
+    <Compile Include="DIUS4\Adapters\ProtocolSet.cs" />
+    <Compile Include="DIUS4\Adapters\ULA.cs" />
+    <Compile Include="DIUS4\Adapters\VCI_Info.cs" />
+    <Compile Include="DIUS4\Adapters\VCI_Message.cs" />
+    <Compile Include="DIUS4\Adapters\VCI_State.cs" />
+    <Compile Include="DIUS4\Adapters\ZLG.cs" />
+    <Compile Include="DIUS4\Analyzer.cs" />
+    <Compile Include="DIUS4\Decode.cs" />
+    <Compile Include="DIUS4\Device.cs" />
+    <Compile Include="DIUS4\Disclaimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIUS4\Disclaimer.Designer.cs">
+      <DependentUpon>Disclaimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIUS4\Dius.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DIUS4\Dius.Designer.cs">
+      <DependentUpon>Dius.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DIUS4\DiusParser.cs" />
+    <Compile Include="DIUS4\Functions.cs" />
+    <Compile Include="DIUS4\My\MyApplication.cs" />
+    <Compile Include="DIUS4\My\MyComputer.cs" />
+    <Compile Include="DIUS4\My\MyProject.cs" />
+    <Compile Include="DIUS4\My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DIUS4\My\MySettingsProperty.cs" />
+    <Compile Include="DIUS4\My\Resources\Resources.cs" />
+    <Compile Include="DIUS4\Network.cs" />
+    <Compile Include="DIUS4\Shield\Protect.cs" />
+    <Compile Include="DIUS4\SqlFunc.cs" />
+    <Compile Include="DIUS4\VCI.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\ApplicationEvents4.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\ApplicationEvents4_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Document.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\DocumentEvents2.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\DocumentEvents2_Event.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Documents.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Find.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Replacement.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\Selection.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdFindWrap.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\WdReplace.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\_Application.cs" />
+    <Compile Include="Microsoft\Office\Interop\Word\_Document.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DIUS 4.0.4.exe.licenses" />
+    <EmbeddedResource Include="DIUS4\Disclaimer.resources" />
+    <EmbeddedResource Include="DIUS4\DIUS 4.vbs" />
+    <EmbeddedResource Include="DIUS4\Dius.resources" />
+    <EmbeddedResource Include="DIUS4\DIUS_Tools.vbs" />
+    <EmbeddedResource Include="DIUS4\Resources.resources" />
+    <EmbeddedResource Include="DIUS4\VCI.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="DIUS4\My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
